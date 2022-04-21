@@ -34,9 +34,9 @@ lib-install: $(SHLIB)
 .PHONY: test
 test:
 	cd test && \
-	cmake -S . -B _build && \
-	make -C _build && \
-	./_build/hello_test
+        cmake -S . -B _build && \
+        make -C _build && \
+        ./_build/hello_test
 
 .PHONY: lib-uninstall
 lib-uninstall:
