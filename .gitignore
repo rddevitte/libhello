@@ -1,0 +1,4 @@
+*.o
+*.so
+hello
+test/_build
