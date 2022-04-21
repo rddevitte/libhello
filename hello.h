@@ -1,3 +1,7 @@
+/**
+ * \file  hello.h
+ * \brief libhello function declaration
+ */
 #ifndef HELLO_H
 #define HELLO_H
 
@@ -11,7 +15,7 @@ extern "C" {
 void hello_print(void);
 
 #ifdef __cplusplus
-}
+} // extern "C"
 #endif
 
 #endif // HELLO_H
