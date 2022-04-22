@@ -27,12 +27,12 @@ $(EXEC): main.o $(SHLIB)
 lib: $(SHLIB)
 
 .PHONY: lib-install
-lib-install: $(SHLIB)
+lib-install: lib
 	install -m 0755 $(SHLIB) $(LIBDIR)
 	install -m 0644 $(INCL) $(INCLDIR)
 
 .PHONY: test
-test:
+test: lib
 	cd test && \
         cmake -S . -B _build && \
         make -C _build && \
