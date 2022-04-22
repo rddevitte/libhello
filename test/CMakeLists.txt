@@ -7,11 +7,11 @@ set(CMAKE_CXX_STANDARD 11)
 enable_testing()
 find_package(GTest REQUIRED)
 
-find_library(LIBHELLO hello PATHS ../)
+find_library(LIBHELLO hello PATHS ..)
 
 add_executable(hello_test hello_test.cc)
 
-target_include_directories(hello_test PUBLIC ../)
+target_include_directories(hello_test PUBLIC ../include)
 
 target_link_libraries(hello_test PRIVATE GTest::GTest ${LIBHELLO})
 

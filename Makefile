@@ -1,5 +1,5 @@
 CC     := gcc
-CFLAGS := -Wall -Wextra -Werror -pedantic
+CFLAGS := -Iinclude -Wall -Wextra -Werror -pedantic
 RM     := rm -vf
 
 EXEC  := hello
@@ -14,7 +14,7 @@ INCLDIR ?= $(PREFIX)/include
 .PHONY: all
 all: $(SHLIB) $(EXEC)
 
-%.o: %.c
+%.o: src/%.c
 	$(CC) -c $< -o $@ -fPIC $(CFLAGS)
 
 $(SHLIB): hello.o
